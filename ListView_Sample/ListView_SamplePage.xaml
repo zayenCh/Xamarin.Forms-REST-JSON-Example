@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:ListView_Sample" 
+		x:Class="ListView_Sample.ListView_SamplePage">
+
+    <ListView x:Name="myListView" 
+			  ItemSelected="Event_ItemSelected">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+			   <ViewCell>
+
+					<StackLayout Orientation="Horizontal"
+							     Margin="12">
+						<Image Source="{Binding url}"></Image>
+						<Label Text="{Binding title}"></Label>	
+			        </StackLayout>
+
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>
